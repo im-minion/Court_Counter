@@ -2,6 +2,10 @@
     <string name="app_name">Court Counter</string>
     <string name="bname">+3 Points</string>
     <string name="b2name">+2 POINTS</string>
-    <string name="b3name">+1 POINT</string>
+    <string name="b3name">Free Throw</string>
     <string name="r">RESET</string>
+    <string name="team_a">Team A</string>
+    <string name="_0">0</string>
+    <string name="team_b">Team B</string>
+    <string name="_0">0</string>
 </resources>

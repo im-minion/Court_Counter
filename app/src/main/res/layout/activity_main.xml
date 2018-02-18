@@ -1,157 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="32dp"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
     tools:context="vaibhav.com.courtcounter.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:padding="4dp"
-        android:orientation="vertical"
-        android:id="@+id/rl1">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Team A"
-            android:layout_margin="4dp"
-            android:textAlignment="center"
-            android:layout_centerHorizontal="true"
-            android:textColor="#FF8C00"
-            android:id="@+id/teama"
-            android:textSize="18sp"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textSize="48sp"
-            android:textAlignment="center"
-            android:layout_below="@+id/teama"
-            android:id="@+id/scorea"
-            android:layout_margin="4dp"
-            />
-
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/bname"
-            android:textSize="18sp"
-            android:id="@+id/point3a"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/scorea"
-            android:onClick="add3a"
-            android:layout_margin="4dp"
-            android:background="#FF8C00"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/b2name"
-            android:textSize="16sp"
-            android:id="@+id/point2a"
-            android:layout_below="@+id/point3a"
-            android:onClick="add2a"
-            android:layout_margin="4dp"
-            android:background="#FF8C00"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/b3name"
-            android:textSize="18sp"
-            android:id="@+id/point1a"
-            android:layout_below="@+id/point2a"
-            android:onClick="add1a"
-            android:layout_margin="4dp"
-            android:background="#FF8C00"
-            />
-
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/rl2"
-        android:padding="4dp"
-        android:layout_toRightOf="@+id/rl1"
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Team B"
-            android:textAlignment="center"
-            android:layout_centerHorizontal="true"
-            android:textColor="#FF8C00"
-            android:id="@+id/teamb"
-            android:textSize="18sp"
-            android:layout_margin="4dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:layout_margin="4dp"
-            android:textSize="48sp"
-            android:textAlignment="center"
-            android:layout_below="@+id/teamb"
-            android:id="@+id/scoreb"
-            />
-
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:text="@string/bname"
-            android:textSize="18sp"
-            android:id="@+id/point3b"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/scoreb"
-            android:onClick="add3b"
-            android:background="#FF8C00"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/b2name"
-            android:background="#FF8C00"
-            android:textSize="16sp"
-            android:id="@+id/point2b"
-            android:layout_below="@+id/point3b"
-            android:layout_margin="4dp"
-            android:onClick="add2b"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/b3name"
-            android:textSize="18sp"
-
-            android:id="@+id/point1b"
-            android:layout_below="@+id/point2b"
-            android:onClick="add1b"
-            android:layout_margin="4dp"
-            android:background="#FF8C00"/>
-    </RelativeLayout>
-
-    <Button
-        android:layout_marginTop="28dp"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rl1"
-        android:text="@string/r"
-        android:id="@+id/reset"
-        android:onClick="resetf"
-        android:background="#FF8C00"
-        />
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
 
-</RelativeLayout>
+        <LinearLayout
+            android:id="@+id/rl1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/teama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/team_a"
+                android:textAlignment="center"
+                android:textColor="#FF8C00"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/scorea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/_0"
+                android:textAlignment="center"
+                android:textSize="48sp" />
+
+
+            <Button
+                android:id="@+id/point3a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="24dp"
+                android:background="#FF8C00"
+                android:onClick="add3a"
+                android:text="@string/bname"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/point2a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="#FF8C00"
+                android:onClick="add2a"
+                android:text="@string/b2name"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/point1a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="#FF8C00"
+                android:onClick="add1a"
+
+                android:text="@string/b3name"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+
+            android:id="@+id/rl2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/teamb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/team_b"
+                android:textAlignment="center"
+                android:textColor="#FF8C00"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/scoreb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/_0"
+                android:textAlignment="center"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/point3b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="24dp"
+                android:background="#FF8C00"
+                android:onClick="add3b"
+                android:text="@string/bname"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/point2b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="#FF8C00"
+                android:onClick="add2b"
+                android:text="@string/b2name"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/point1b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="#FF8C00"
+                android:onClick="add1b"
+                android:text="@string/b3name"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FF8C00"
+            android:text="@string/r"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>
