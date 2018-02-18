@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/team_a"
                 android:textAlignment="center"
-                android:textColor="#FF8C00"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="18sp" />
 
             <TextView
@@ -99,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/team_b"
                 android:textAlignment="center"
-                android:textColor="#FF8C00"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="18sp" />
 
             <TextView
